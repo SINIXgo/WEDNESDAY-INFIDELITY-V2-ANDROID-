@@ -1,7 +1,6 @@
 function onCreate()
-    makeLuaSprite('bg','que',-600)
+    makeLuaSprite('bg','BG_OSWALD',-600)
     addLuaSprite('bg')
-
 makeAnimatedLuaSprite('grain', 'grain', 0, 0);
 addAnimationByPrefix('grain', 'grain', 'grain', 24, true);  
 objectPlayAnimation('grain', 'grain', true)

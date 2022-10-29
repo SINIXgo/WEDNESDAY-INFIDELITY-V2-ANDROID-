@@ -1,132 +1,89 @@
-Zoom = true
-
 function onCreate()
-
-  makeLuaSprite('BG_OSWALD', 'backgrounds/BG_OSWALD', -600, -300);
-  setScrollFactor('BG_OSWALD', 1, 1);
-  scaleLuaSprite('BG_OSWALD', 1, 1);
-  addLuaSprite('BG_OSWALD', false);
-
-makeLuaSprite('bartop', '' ,0, -200)
-makeGraphic('bartop', 1280, 200,'000000')
-addLuaSprite('bartop',false)
-setObjectCamera('bartop','other')
-setScrollFactor('bartop',0,0)
-
-makeLuaSprite('barbot', '', 0, 850)
-makeGraphic('barbot', 1280, 200,'000000')
-addLuaSprite('barbot',false)
-setScrollFactor('barbot',0,0)
-setObjectCamera('barbot','other')
-
-  setProperty('defaultCamZoom', 0.66) 
+makeLuaSprite('VecindarioBG', 'backgrounds/BG_OSWALD', -615, -270);
+setLuaSpriteScrollFactor('VecindarioBG', 1, 1);
+addLuaSprite('VecindarioBG', false);
+   setObjectOrder('NoPuedesDetenerte', true)
+    setObjectOrder('NoPauseSatan', false)
+    setObjectOrder('BarradeArriba', false)
+    setObjectOrder('BarradeAbajo', false)
 end
 
-function onEvent(name, value1, value2)
-	if name == 'lyrics' then
-		BarsOn()
-		if value1 == '' then
-		BarsOff()
-		end
-	end
+function onCreatePost()
+setProperty('iconP2.y', getProperty('iconP2.y') - 15);   
 end
-
-local Beat = 0
-local Zoom1 = 0
-local Zoom2 = 0
 
 function onStepHit()
-if curStep == 432 then 
-setObjectCamera('bartop','hud')
-setObjectCamera('barbot','hud')
-Zoom1 = 0.15
-Zoom2 = 0.06
+if curStep == 952 then
+noteTweenAlpha("notapl1", 0, 0, 0.2, "linear")
+	noteTweenAlpha("notapl2", 1, 0, 0.2, "linear")
+	noteTweenAlpha("notapl3", 2, 0, 0.2, "linear")
+	noteTweenAlpha("notapl4", 3, 0, 0.2, "linear")
+noteTweenAlpha("notaop1", 4, 0, 0.2, "linear")
+	noteTweenAlpha("notaop2", 5, 0, 0.2, "linear")
+	noteTweenAlpha("notaop3", 6, 0, 0.2, "linear")
+	noteTweenAlpha("notaop4", 7, 0, 0.2, "linear")
+	doTweenAlpha('AlphaTween1', 'healthBarBG', 0, 0.2)
+	doTweenAlpha('AlphaTween2', 'healthBar', 0, 0.2)
+	doTweenAlpha('AlphaTween3', 'scoreTxt', 0, 0.2)
+	doTweenAlpha('AlphaTween4', 'iconP1', 0, 0.2)
+	doTweenAlpha('AlphaTween5', 'iconP2', 0, 0.2)
+	doTweenAlpha('AlphaTween6', 'timeBar', 0, 0.2)
+	doTweenAlpha('AlphaTween7', 'timeBarBG', 0, 0.2)
+	doTweenAlpha('AlphaTween8', 'timeTxt', 0, 0.2)
+	doTweenAlpha('AlphaTween9', 'Sick', 0, 0.2)
+	doTweenAlpha('AlphaTween10', 'Good', 0, 0.2)
+	doTweenAlpha('AlphaTween11', 'Bad', 0, 0.2)
+	doTweenAlpha('AlphaTween12', 'Shit', 0, 0.2)
+	doTweenAlpha('AlphaTween13', 'Score', 0, 0.2)
+	doTweenAlpha('AlphaTween14', 'Misses', 0, 0.2)
+	doTweenAlpha('AlphaTween15', 'Accuracy', 0, 0.2)
+	doTweenAlpha('AlphaTween16', 'NameSong', 0, 0.2)
+	doTweenAlpha('AlphaTween17', 'Time', 0, 0.2)
 end
-if curStep == 944 then 
-Zoom = false
-Zoom1 = 0
-Zoom2 = 0
-noteTweenAlpha("A1", 0, 0, 1, "linear")
-noteTweenAlpha("A2", 1, 0, 1, "linear")
-noteTweenAlpha("A3", 2, 0, 1, "linear")
-noteTweenAlpha("A4", 3, 0, 1, "linear")
-noteTweenAlpha("A5", 4, 0, 1, "linear")
-noteTweenAlpha("A6", 5, 0, 1, "linear")
-noteTweenAlpha("A7", 6, 0, 1, "linear")
-noteTweenAlpha("A8", 7, 0, 1, "linear")
-doTweenAlpha('healthBarBG', 'healthBarBG', 0, 1, 'linear')
-doTweenAlpha('healthBar', 'healthBar', 0, 1, 'linear')
-doTweenAlpha('scoreTxt', 'scoreTxt', 0, 1, 'linear')
-doTweenAlpha('iconP1', 'iconP1', 0, 1, 'linear')
-doTweenAlpha('iconP2', 'iconP2', 0, 1, 'linear')
-end
-if curStep == 1070 then 
-noteTweenAlpha("A5", 4, 1, 0.5, "linear")
-noteTweenAlpha("A6", 5, 1, 0.5, "linear")
-noteTweenAlpha("A7", 6, 1, 0.5, "linear")
-noteTweenAlpha("A8", 7, 1, 0.5, "linear")
-end
-if curStep == 1207 then 
-noteTweenAlpha("A1", 0, 1, 0.5, "linear")
-noteTweenAlpha("A2", 1, 1, 0.5, "linear")
-noteTweenAlpha("A3", 2, 1, 0.5, "linear")
-noteTweenAlpha("A4", 3, 1, 0.5, "linear")
-noteTweenAlpha("A5", 4, 1, 0.5, "linear")
-noteTweenAlpha("A6", 5, 1, 0.5, "linear")
-noteTweenAlpha("A7", 6, 1, 0.5, "linear")
-noteTweenAlpha("A8", 7, 1, 0.5, "linear")
-doTweenAlpha('healthBarBG', 'healthBarBG', 1, 1, 'linear')
-doTweenAlpha('healthBar', 'healthBar', 1, 1, 'linear')
-doTweenAlpha('scoreTxt', 'scoreTxt', 1, 1, 'linear')
-doTweenAlpha('iconP1', 'iconP1', 1, 1, 'linear')
-doTweenAlpha('iconP2', 'iconP2', 1, 1, 'linear')
-Zoom = true
-Zoom1 = 0.25
-Zoom2 = 0.082
-end
-if curStep == 1975 then 
-BarsOn()
-Zoom1 = 0.30
-Zoom2 = 0.090
+if curStep == 1072 then
+if getPropertyFromClass('ClientPrefs', 'middleScroll') == true then--Detalles pa ,Detalles
+noteTweenAlpha("notaop1", 0, 0.5, 1, "linear")
+	noteTweenAlpha("notaop2", 1, 0.5, 1, "linear")
+	noteTweenAlpha("notaop3", 2, 0.5, 1, "linear")
+	noteTweenAlpha("notaop4", 3, 0.5, 1, "linear")
+noteTweenAlpha("notapl1", 4, 1, 1, "linear")
+	noteTweenAlpha("notapl2", 5, 1, 1, "linear")
+	noteTweenAlpha("notapl3", 6, 1, 1, "linear")
+	noteTweenAlpha("notapl4", 7, 1, 1, "linear")
+	end
+if getPropertyFromClass('ClientPrefs', 'middleScroll') == false then
+noteTweenAlpha("notaop1", 0, 1, 1, "linear")
+	noteTweenAlpha("notaop2", 1, 1, 1, "linear")
+	noteTweenAlpha("notaop3", 2, 1, 1, "linear")
+	noteTweenAlpha("notaop4", 3, 1, 1, "linear")
+noteTweenAlpha("notapl1", 4, 1, 1, "linear")
+	noteTweenAlpha("notapl2", 5, 1, 1, "linear")
+	noteTweenAlpha("notapl3", 6, 1, 1, "linear")
+	noteTweenAlpha("notapl4", 7, 1, 1, "linear")
 end
 end
-
-function BarsOff()
-doTweenY('barbot', 'barbot', 850, 0.5, 'linear');
-doTweenY('bartop', 'bartop', -200, 0.5, 'linear');  
+if curStep == 1208 then
+addLuaScript('custom_events/MokeyTiemblaPantalla')--Si, usé este mismo xd
+doTweenAlpha('AlphaTween1', 'healthBarBG', 1, 0.2)
+	doTweenAlpha('AlphaTween2', 'healthBar', 1, 0.2)
+	doTweenAlpha('AlphaTween3', 'scoreTxt', 1, 0.2)
+	doTweenAlpha('AlphaTween4', 'iconP1', 1, 0.2)
+	doTweenAlpha('AlphaTween5', 'iconP2', 1, 0.2)
+	doTweenAlpha('AlphaTween6', 'timeBar', 1, 0.2)
+	doTweenAlpha('AlphaTween7', 'timeBarBG', 1, 0.2)
+	doTweenAlpha('AlphaTween8', 'timeTxt', 1, 0.2)
+	doTweenAlpha('AlphaTween9', 'Sick', 1, 0.2)
+	doTweenAlpha('AlphaTween10', 'Good', 1, 0.2)
+	doTweenAlpha('AlphaTween11', 'Bad', 1, 0.2)
+	doTweenAlpha('AlphaTween12', 'Shit', 1, 0.2)
+	doTweenAlpha('AlphaTween13', 'Score', 1, 0.2)
+	doTweenAlpha('AlphaTween14', 'Misses', 1, 0.2)
+	doTweenAlpha('AlphaTween15', 'Accuracy', 1, 0.2)
+	doTweenAlpha('AlphaTween16', 'NameSong', 1, 0.2)
+	doTweenAlpha('AlphaTween17', 'Time', 1, 0.2)
 end
-
-function BarsOn()
-doTweenY('barbot', 'barbot', 640, 0.5, 'linear');
-doTweenY('bartop', 'bartop', -100, 0.5, 'linear');  
-end
-
-local Cam1 = 0.8
-local Cam2 = 0.7
-
-function onMoveCamera(focus)
-if Zoom then
-if focus == 'boyfriend' then
-setProperty('defaultCamZoom', Cam1) 
-elseif focus == 'dad' then
-setProperty('defaultCamZoom', Cam2) 
-end
-end
-end
-
-function opponentNoteHit()
-if curStep >= 1207 then
-cameraShake('camOther', '0.006', '0.11')	
-triggerEvent('Screen Shake', '0.11, 0.009', '0.11, 0.009')
-health = getProperty('health')
-if getProperty('health') > 0.10 then
-setProperty('health', health- 0.01);
-end
-end
-end
-
-function onBeatHit()
-if curBeat % 1 == 0 then
-triggerEvent('Add Camera Zoom', Zoom1, Zoom2)
+if curStep == 2488 then
+setProperty('camGame.alpha',0);
+setProperty('camHUD.alpha',0);
 end
 end

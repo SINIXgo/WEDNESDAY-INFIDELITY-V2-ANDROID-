@@ -1,120 +1,244 @@
-function onCreate()
+function onCreate()   
+makeLuaSprite('bgintro', 'backgrounds/iratus/bgintro', -830, -720);
+addLuaSprite('bgintro', false);
+scaleObject('bgintro', 1.2,1.2);
 
-Sprite('BG1', 'backgrounds/iratus/bgintro', -608, -482, 2, 2, 'camGame', 1, 1)
+makeLuaSprite('bgSKY.', 'backgrounds/iratus/INFERNO_SKY', -680, -550);
+addLuaSprite('bgSKY', false);
+scaleObject('bgSKY', 1,1);
+setProperty('bgSKY.visible', false);
 
-Sprite('Cielo', 'backgrounds/iratus/INFERNO_SKY', -608, -482, 2, 2, 'camGame', 0.5, 0.5)
+if not lowQuality then
+makeAnimatedLuaSprite('Esqueletos', 'backgrounds/iratus/SKULLS', -350, 200);
+  addAnimationByPrefix('Esqueletos', 'idle', 'SKULLS', 24, true);
+  scaleObject('Esqueletos', 1,1);
+  addLuaSprite('Esqueletos',false)
+  setProperty('Esqueletos.visible', false);
+  end
+  
+makeLuaSprite('bgROCA', 'backgrounds/iratus/ROCK_BG', -680, 350);
+addLuaSprite('bgROCA', false);
+scaleObject('bgROCA', 1,1);
 
-makeAnimatedLuaSprite('SKULLS', 'backgrounds/iratus/SKULLS', -506, 164);
-addAnimationByPrefix('SKULLS', 'SKULLS', 'SKULLS', 24, false);  
-setScrollFactor('SKULLS', 0.85, 0.9);
-scaleLuaSprite('SKULLS', 2.2, 2);
-addLuaSprite('SKULLS', false);
+setProperty('bgROCA.visible', false);
+  makeLuaSprite('BarradeArriba', '', 0, -120)
+	makeGraphic('BarradeArriba', 1280, 120, '000000')
+	setObjectCamera('BarradeArriba', 'camHUD')
+	addLuaSprite('BarradeArriba', false)
 
-Sprite('Piso', 'backgrounds/iratus/ROCK_BG', -608, 324, 2.05, 2, 'camGame', 1, 1)
+	makeLuaSprite('BarradeAbajo', '', 0, 720)
+	makeGraphic('BarradeAbajo', 1280, 120, '000000')
+	setObjectCamera('BarradeAbajo', 'camHUD')
+	addLuaSprite('BarradeAbajo', false)
+	
+	makeAnimatedLuaSprite('diabloRisa', 'backgrounds/iratus/SATAN_LAUGH_SCREEN', -100, 0);
+  addAnimationByPrefix('diabloRisa', 'idle', 'SATAN LAUGH SCREEN', 24, false);
+  scaleObject('diabloRisa', 2,2);
+  addLuaSprite('diabloRisa',true)
+  setProperty('diabloRisa.visible', false);
+  setObjectCamera('diabloRisa', 'camHUD')
 
-makeAnimatedLuaSprite('Risa', 'characters/Iratus/Risa', defaultOpponentX-280, defaultOpponentY-100);
-addAnimationByPrefix('Risa', 'Risa', 'demon fire juju instancia ', 24, false);  
-objectPlayAnimation('Risa', 'Risa', true)
-scaleLuaSprite('Risa', 2, 2);
-addLuaSprite('Risa', true);
-setProperty('Risa.alpha', 0)
-
-makeAnimatedLuaSprite('SATANAnim', 'backgrounds/iratus/SATAN_LAUGH_SCREEN', 0, 0);
-addAnimationByPrefix('SATANAnim', 'SATANAnim', 'SATAN', 24, false);  
-objectPlayAnimation('SATANAnim', 'SATANAnim', true)
-scaleLuaSprite('SATANAnim', 2, 2);
-addLuaSprite('SATANAnim', true);
-setObjectCamera('SATANAnim', 'hud');
-setProperty('SATANAnim.alpha', 0)
-
-makeLuaSprite('bartop','',0,-30)
-makeGraphic('bartop',1280,100,'000000')
-addLuaSprite('bartop',false)
-setObjectCamera('bartop','hud')
-setScrollFactor('bartop', 0, 0)
-
-makeLuaSprite('barbot','',0,650)
-makeGraphic('barbot',1280,100,'000000')
-addLuaSprite('barbot',false)
-setScrollFactor('barbot', 0, 0)
-setObjectCamera('barbot','hud')
-
-setProperty('bartop.alpha', 0)
-setProperty('barbot.alpha', 0)
-
-setProperty('SKULLS.visible', false)
-setProperty('Cielo.visible', false)
-setProperty('Piso.visible', false)
-
-makeLuaSprite('BS','', 0, 0)
-makeGraphic('BS', screenWidth, screenHeight, '000000')
-setObjectCamera('BS', 'hud')
-setProperty('BS.alpha', 1)
-addLuaSprite('BS', false)
-
-setProperty('defaultCamZoom', 0.7) 
+	setProperty('gfGroup.visible', false);
+	setProperty('camGame.alpha',0);
 end
 
-function onStepHit()
+function onStepHit()--Eventos por Nickobelit (Si los usas dejas créditos)
+if curStep == 1 then
+setProperty('camGame.alpha',1);
+end
+if curStep == 256 then
+doTweenY('BarraNegra1', 'BarradeArriba', 0, 1, 'quartOut')
+doTweenY('BarraNegra2', 'BarradeAbajo', 600, 1, 'quartOut')
+doTweenAlpha('AlphaTween3', 'scoreTxt', 0, 1)
+	doTweenAlpha('AlphaTween6', 'timeBar', 0, 1)
+	doTweenAlpha('AlphaTween7', 'timeBarBG', 0, 1)
+	doTweenAlpha('AlphaTween8', 'timeTxt', 0, 1)
+	doTweenAlpha('AlphaTween9', 'Sick', 0, 1)
+	doTweenAlpha('AlphaTween10', 'Good', 0, 1)
+	doTweenAlpha('AlphaTween11', 'Bad', 0, 1)
+	doTweenAlpha('AlphaTween12', 'Shit', 0, 1)
+	doTweenAlpha('AlphaTween13', 'Score', 0, 1)
+	doTweenAlpha('AlphaTween14', 'Misses', 0, 1)
+	doTweenAlpha('AlphaTween15', 'Accuracy', 0, 1)
+	doTweenAlpha('AlphaTween16', 'NameSong', 0, 1)
+	doTweenAlpha('AlphaTween17', 'Time', 0, 1)
+end
 if curStep == 496 then
-setProperty('Risa.alpha', 1)
-objectPlayAnimation('Risa', 'Risa', true)
+noteTweenAlpha("notapl1", 0, 0, 0.2, "linear")
+	noteTweenAlpha("notapl2", 1, 0, 0.2, "linear")
+	noteTweenAlpha("notapl3", 2, 0, 0.2, "linear")
+	noteTweenAlpha("notapl4", 3, 0, 0.2, "linear")
+noteTweenAlpha("notaop1", 4, 0, 0.2, "linear")
+	noteTweenAlpha("notaop2", 5, 0, 0.2, "linear")
+	noteTweenAlpha("notaop3", 6, 0, 0.2, "linear")
+	noteTweenAlpha("notaop4", 7, 0, 0.2, "linear")
+	doTweenAlpha('AlphaTween1', 'healthBarBG', 0, 0.2)
+	doTweenAlpha('AlphaTween2', 'healthBar', 0, 0.2)
+	doTweenAlpha('AlphaTween4', 'iconP1', 0, 0.2)
+	doTweenAlpha('AlphaTween5', 'iconP2', 0, 0.2)
+	end
+if curStep == 508 then
+doTweenAlpha('AlphaTween1', 'healthBarBG', 1, 0.2)
+	doTweenAlpha('AlphaTween2', 'healthBar', 1, 0.2)
+	doTweenAlpha('AlphaTween3', 'scoreTxt', 1, 0.2)
+	doTweenAlpha('AlphaTween4', 'iconP1', 1, 0.2)
+	doTweenAlpha('AlphaTween5', 'iconP2', 1, 0.2)
+	doTweenAlpha('AlphaTween6', 'timeBar', 1, 0.2)
+	doTweenAlpha('AlphaTween7', 'timeBarBG', 1, 0.2)
+	doTweenAlpha('AlphaTween8', 'timeTxt', 1, 0.2)
+	doTweenAlpha('AlphaTween9', 'Sick', 1, 0.2)
+	doTweenAlpha('AlphaTween10', 'Good', 1, 0.2)
+	doTweenAlpha('AlphaTween11', 'Bad', 1, 0.2)
+	doTweenAlpha('AlphaTween12', 'Shit', 1, 0.2)
+	doTweenAlpha('AlphaTween13', 'Score', 1, 0.2)
+	doTweenAlpha('AlphaTween14', 'Misses', 1, 0.2)
+	doTweenAlpha('AlphaTween15', 'Accuracy', 1, 0.2)
+	doTweenAlpha('AlphaTween16', 'NameSong', 1, 0.2)
+	doTweenAlpha('AlphaTween17', 'Time', 1, 0.2)
+	if getPropertyFromClass('ClientPrefs', 'middleScroll') == true then--Detalles pa ,Detalles
+noteTweenAlpha("notaop1", 0, 0.5, 0.2, "linear")
+	noteTweenAlpha("notaop2", 1, 0.5, 0.2, "linear")
+	noteTweenAlpha("notaop3", 2, 0.5, 0.2, "linear")
+	noteTweenAlpha("notaop4", 3, 0.5, 0.2, "linear")
+noteTweenAlpha("notapl1", 4, 1, 0.2, "linear")
+	noteTweenAlpha("notapl2", 5, 1, 0.2, "linear")
+	noteTweenAlpha("notapl3", 6, 1, 0.2, "linear")
+	noteTweenAlpha("notapl4", 7, 1, 0.2, "linear")
+	end
+if getPropertyFromClass('ClientPrefs', 'middleScroll') == false then
+noteTweenAlpha("notaop1", 0, 1, 0.2, "linear")
+	noteTweenAlpha("notaop2", 1, 1, 0.2, "linear")
+	noteTweenAlpha("notaop3", 2, 1, 0.2, "linear")
+	noteTweenAlpha("notaop4", 3, 1, 0.2, "linear")
+noteTweenAlpha("notapl1", 4, 1, 0.2, "linear")
+	noteTweenAlpha("notapl2", 5, 1, 0.2, "linear")
+	noteTweenAlpha("notapl3", 6, 1, 0.2, "linear")
+	noteTweenAlpha("notapl4", 7, 1, 0.2, "linear")
+end
 end
 if curStep == 512 then
-removeLuaSprite('BG1')
-removeLuaSprite('Risa')
-runTimer('st1', 0.001, 1);
-runTimer('st2', 0.005, 1);
-runTimer('st3', 0.0010, 1);
+removeLuaSprite('bgintro',true)
+setProperty('bgROCA.visible', true);
+setProperty('bgSKY.visible', true);
+setProperty('Esqueletos.visible', true);
+doTweenY('BarraNegra1', 'BarradeArriba', -120, 1, 'quartOut')
+doTweenY('BarraNegra2', 'BarradeAbajo', 720, 1, 'quartOut')
+end
+if curStep == 1152 then
+doTweenY('BarraNegra1', 'BarradeArriba', 0, 1, 'quartOut')
+doTweenY('BarraNegra2', 'BarradeAbajo', 600, 1, 'quartOut')
+doTweenAlpha('AlphaTween3', 'scoreTxt', 0, 1)
+	doTweenAlpha('AlphaTween6', 'timeBar', 0, 1)
+	doTweenAlpha('AlphaTween7', 'timeBarBG', 0, 1)
+	doTweenAlpha('AlphaTween8', 'timeTxt', 0, 1)
+	doTweenAlpha('AlphaTween9', 'Sick', 0, 1)
+	doTweenAlpha('AlphaTween10', 'Good', 0, 1)
+	doTweenAlpha('AlphaTween11', 'Bad', 0, 1)
+	doTweenAlpha('AlphaTween12', 'Shit', 0, 1)
+	doTweenAlpha('AlphaTween13', 'Score', 0, 1)
+	doTweenAlpha('AlphaTween14', 'Misses', 0, 1)
+	doTweenAlpha('AlphaTween15', 'Accuracy', 0, 1)
+	doTweenAlpha('AlphaTween16', 'NameSong', 0, 1)
+	doTweenAlpha('AlphaTween17', 'Time', 0, 1)
+	noteTweenAlpha("notapl1", 0, 0, 1, "linear")
+	noteTweenAlpha("notapl2", 1, 0, 1, "linear")
+	noteTweenAlpha("notapl3", 2, 0, 1, "linear")
+	noteTweenAlpha("notapl4", 3, 0, 1, "linear")
+end
+if curStep == 1404 then
+if getPropertyFromClass('ClientPrefs', 'middleScroll') == true then--Detalles pa ,Detalles
+noteTweenAlpha("notaop1", 0, 0.5, 0.2, "linear")
+	noteTweenAlpha("notaop2", 1, 0.5, 0.2, "linear")
+	noteTweenAlpha("notaop3", 2, 0.5, 0.2, "linear")
+	noteTweenAlpha("notaop4", 3, 0.5, 0.2, "linear")
+noteTweenAlpha("notapl1", 4, 1, 0.2, "linear")
+	noteTweenAlpha("notapl2", 5, 1, 0.2, "linear")
+	noteTweenAlpha("notapl3", 6, 1, 0.2, "linear")
+	noteTweenAlpha("notapl4", 7, 1, 0.2, "linear")
+	end
+if getPropertyFromClass('ClientPrefs', 'middleScroll') == false then
+noteTweenAlpha("notaop1", 0, 1, 0.2, "linear")
+	noteTweenAlpha("notaop2", 1, 1, 0.2, "linear")
+	noteTweenAlpha("notaop3", 2, 1, 0.2, "linear")
+	noteTweenAlpha("notaop4", 3, 1, 0.2, "linear")
+noteTweenAlpha("notapl1", 4, 1, 0.2, "linear")
+	noteTweenAlpha("notapl2", 5, 1, 0.2, "linear")
+	noteTweenAlpha("notapl3", 6, 1, 0.2, "linear")
+	noteTweenAlpha("notapl4", 7, 1, 0.2, "linear")
 end
 end
-
-function onTimerCompleted(tag, loops, loopsLeft)
-if tag == 'st1' then
-setProperty('SKULLS.visible', true)
-elseif tag == 'st2' then
-setProperty('Cielo.visible', true)
-elseif tag == 'st3' then
-setProperty('Piso.visible', true)
+if curStep == 1516 then
+	noteTweenAlpha("notapl1", 0, 0, 0.2, "linear")
+	noteTweenAlpha("notapl2", 1, 0, 0.2, "linear")
+	noteTweenAlpha("notapl3", 2, 0, 0.2, "linear")
+	noteTweenAlpha("notapl4", 3, 0, 0.2, "linear")
+noteTweenAlpha("notaop1", 4, 0, 0.2, "linear")
+	noteTweenAlpha("notaop2", 5, 0, 0.2, "linear")
+	noteTweenAlpha("notaop3", 6, 0, 0.2, "linear")
+	noteTweenAlpha("notaop4", 7, 0, 0.2, "linear")
+	doTweenAlpha('AlphaTween1', 'healthBarBG', 0, 0.2)
+	doTweenAlpha('AlphaTween2', 'healthBar', 0, 0.2)
+	doTweenAlpha('AlphaTween4', 'iconP1', 0, 0.2)
+	doTweenAlpha('AlphaTween5', 'iconP2', 0, 0.2)
+end
+if curStep == 1520 then
+setProperty('diabloRisa.visible', true);
+objectPlayAnimation('diabloRisa','idle',false)
+end
+if curStep == 1532 then
+doTweenAlpha('AlphaTween1', 'healthBarBG', 1, 0.2)
+	doTweenAlpha('AlphaTween2', 'healthBar', 1, 0.2)
+	doTweenAlpha('AlphaTween3', 'scoreTxt', 1, 0.2)
+	doTweenAlpha('AlphaTween4', 'iconP1', 1, 0.2)
+	doTweenAlpha('AlphaTween5', 'iconP2', 1, 0.2)
+	doTweenAlpha('AlphaTween6', 'timeBar', 1, 0.2)
+	doTweenAlpha('AlphaTween7', 'timeBarBG', 1, 0.2)
+	doTweenAlpha('AlphaTween8', 'timeTxt', 1, 0.2)
+	doTweenAlpha('AlphaTween9', 'Sick', 1, 0.2)
+	doTweenAlpha('AlphaTween10', 'Good', 1, 0.2)
+	doTweenAlpha('AlphaTween11', 'Bad', 1, 0.2)
+	doTweenAlpha('AlphaTween12', 'Shit', 1, 0.2)
+	doTweenAlpha('AlphaTween13', 'Score', 1, 0.2)
+	doTweenAlpha('AlphaTween14', 'Misses', 1, 0.2)
+	doTweenAlpha('AlphaTween15', 'Accuracy', 1, 0.2)
+	doTweenAlpha('AlphaTween16', 'NameSong', 1, 0.2)
+	doTweenAlpha('AlphaTween17', 'Time', 1, 0.2)
+if getPropertyFromClass('ClientPrefs', 'middleScroll') == true then--Detalles pa ,Detalles
+noteTweenAlpha("notaop1", 0, 0.5, 0.2, "linear")
+	noteTweenAlpha("notaop2", 1, 0.5, 0.2, "linear")
+	noteTweenAlpha("notaop3", 2, 0.5, 0.2, "linear")
+	noteTweenAlpha("notaop4", 3, 0.5, 0.2, "linear")
+noteTweenAlpha("notapl1", 4, 1, 0.2, "linear")
+	noteTweenAlpha("notapl2", 5, 1, 0.2, "linear")
+	noteTweenAlpha("notapl3", 6, 1, 0.2, "linear")
+	noteTweenAlpha("notapl4", 7, 1, 0.2, "linear")
+	end
+if getPropertyFromClass('ClientPrefs', 'middleScroll') == false then
+noteTweenAlpha("notaop1", 0, 1, 0.2, "linear")
+	noteTweenAlpha("notaop2", 1, 1, 0.2, "linear")
+	noteTweenAlpha("notaop3", 2, 1, 0.2, "linear")
+	noteTweenAlpha("notaop4", 3, 1, 0.2, "linear")
+noteTweenAlpha("notapl1", 4, 1, 0.2, "linear")
+	noteTweenAlpha("notapl2", 5, 1, 0.2, "linear")
+	noteTweenAlpha("notapl3", 6, 1, 0.2, "linear")
+	noteTweenAlpha("notapl4", 7, 1, 0.2, "linear")
+end
+end
+if curStep == 1536 then
+removeLuaSprite('diabloRisa',true)
+end
+if curStep == 1792 then
+doTweenY('BarraNegra1', 'BarradeArriba', -120, 1, 'quartOut')
+doTweenY('BarraNegra2', 'BarradeAbajo', 720, 1, 'quartOut')
+end
+if curStep == 2304 then
+doTweenAlpha('adiosHUD', 'camHUD', 0, 1.5, 'linear');
+end
+if curStep == 2448 then
+doTweenAlpha('adiosJuego', 'camGame', 0, 4.1, 'linear');
 end
 end
 
 function onBeatHit()
-if curBeat % 2 == 0 then
-objectPlayAnimation('SKULLS', 'SKULLS', true)
+objectPlayAnimation('Esqueletos','idle',true)
 end
-end 
-
-function Sprite(objeto, imagen, xPos, yPos, escalaX, escalaY, Camara, ScrollX, ScrollY)
-makeLuaSprite(objeto, imagen, xPos, yPos);
-scaleLuaSprite(objeto, escalaX, escalaY);
-setObjectCamera(objeto, Camara)
-setScrollFactor(objeto, ScrollX, ScrollY)
-addLuaSprite(objeto);
-end
-
-function opponentNoteHit()
-if curStep >= 395 then
-triggerEvent('Screen Shake', '0.10, 0.007', '0.10, 0.007')
-cameraShake('camOther', '0.004', '0.10')
-health = getProperty('health')
-if getProperty('health') > 0.10 then
-setProperty('health', health- 0.021);
-end
-end
-end
-
-function onEvent(name, value1, value2)
-if name == 'Asbel' then
-if value1 == 'inicio' then   
-removeLuaSprite('BS')
-end
-if value1 == 'midsongevent' then   
-setProperty('SATANAnim.alpha', 1)
-objectPlayAnimation('SATANAnim', 'SATANAnim', true)
-end
-if value1 == 'midno' then   
-removeLuaSprite('SATANAnim')
-end
-end
-end  

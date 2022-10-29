@@ -1,13 +1,22 @@
 function onCreate()   
-   makeLuaSprite('fondoVecindario', 'backgrounds/VecindarioBG', -500, -300);
-   addLuaSprite('fondoVecindario', false);
-   setCharacterX('boyfriend', 750);
-   setCharacterY('boyfriend', 0);
-   setProperty('gfGroup.visible', false);
+makeLuaSprite('fondoDestruido', 'backgrounds/Destruido', -500, -300);
+addLuaSprite('fondoDestruido', false);
+
+makeLuaSprite('BarradeArriba', '', 0, -120)
+makeGraphic('BarradeArriba', 1280, 120, '000000')
+setObjectCamera('BarradeArriba', 'camHUD')
+addLuaSprite('BarradeArriba', false)
+
+makeLuaSprite('BarradeAbajo', '', 0, 720)
+makeGraphic('BarradeAbajo', 1280, 120, '000000')
+setObjectCamera('BarradeAbajo', 'camHUD')
+addLuaSprite('BarradeAbajo', false)
 end
 
 function onStepHit()--Eventos por Nickobelit (Si los usas dejas créditos)
-if curStep == 528 then
+if curStep == 64 then
+doTweenY('BarraNegra1', 'BarradeArriba', 0, 1, 'quartOut')
+doTweenY('BarraNegra2', 'BarradeAbajo', 600, 1, 'quartOut')
 noteTweenAlpha("notapl1", 0, 0, 1, "linear")
 	noteTweenAlpha("notapl2", 1, 0, 1, "linear")
 	noteTweenAlpha("notapl3", 2, 0, 1, "linear")
@@ -34,8 +43,9 @@ noteTweenAlpha("notaop1", 4, 0, 1, "linear")
 	doTweenAlpha('AlphaTween16', 'NameSong', 0, 1)
 	doTweenAlpha('AlphaTween17', 'Time', 0, 1)
 end
-if curStep == 544 then
-addLuaScript('custom_events/NickobelitQuitaVidaXD')
+if curStep == 128 then
+doTweenY('BarraNegra1', 'BarradeArriba', -120, 0.2, 'quartOut')
+doTweenY('BarraNegra2', 'BarradeAbajo', 720, 0.2, 'quartOut')
 doTweenAlpha('AlphaTween1', 'healthBarBG', 1, 0.2)
 	doTweenAlpha('AlphaTween2', 'healthBar', 1, 0.2)
 	doTweenAlpha('AlphaTween3', 'scoreTxt', 1, 0.2)
@@ -74,7 +84,11 @@ noteTweenAlpha("notapl1", 4, 1, 0.2, "linear")
 	noteTweenAlpha("notapl4", 7, 1, 0.2, "linear")
 end
 end
-if curStep == 670 then
-setProperty('camGame.alpha', 0);
+end
+
+function onEndSong()
+if isStoryMode then
+loadSong('hellhole', hard);
+return Function_Stop;
 end
 end

@@ -1,5 +1,6 @@
 function onCreate()
-    makeLuaSprite('bg','que',-600)
+
+    makeLuaSprite('bg','xd',-600)
     addLuaSprite('bg')
 
 makeAnimatedLuaSprite('grain', 'grain', 0, 0);

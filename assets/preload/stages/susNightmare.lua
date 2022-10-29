@@ -1,61 +1,83 @@
-local MaxMisses = 0
-local Mixes = 0
+local xx = 420.95;
+local yy = 513;
+local xx2 = 952.9;
+local yy2 = 550;
+local ofs = 60;
+local followchars = true;
+local del = 0;
+local del2 = 0;
 
 function onCreate()
-
-setProperty('scoreTxt.visible', false);
-
-	makeLuaSprite('bg', 'backgrounds/sus/bg', -640, -340);
-	setScrollFactor('bg', 1, 1);
-	scaleLuaSprite('bg', 1, 1);
-	addLuaSprite('bg', false);
-
-makeAnimatedLuaSprite('leansito', 'backgrounds/sus/leansito', -354.95, 129.65);
-addAnimationByPrefix('leansito', 'leansito', 'leansito', 24, false);  
-scaleLuaSprite('leansito', 1, 1);
-addLuaSprite('leansito', false);
-
-makeAnimatedLuaSprite('flacu-nuggy', 'backgrounds/sus/flacu-nuggy', -354.95, 129.65);
-addAnimationByPrefix('flacu-nuggy', 'flacu-nuggy', 'flacu-nuggy', 24, false);  
-scaleLuaSprite('flacu-nuggy', 1, 1);
-addLuaSprite('flacu-nuggy', false);
-
-	makeLuaSprite('FB', 'backgrounds/sus/FB', -639.35, -340);
-	setScrollFactor('FB', 1, 1);
-	scaleLuaSprite('FB', 1, 1);
-	addLuaSprite('FB', false);
+	makeLuaSprite('BG_SUS', 'backgrounds/BG_SUS', -500, -300);
+	addLuaSprite('BG_SUS', false);
 	
-makeAnimatedLuaSprite('gf-amogus', 'backgrounds/gf-amogus', 1100, 400);
-addAnimationByPrefix('gf-amogus', 'gf-amogus', 'amongus-gf', 24, true);  
-objectPlayAnimation('gf-amogus', 'gf-amogus', true)
-scaleLuaSprite('gf-amogus', 1, 1);
-addLuaSprite('gf-amogus', false);
-
-setProperty('defaultCamZoom', 0.8) 
+	makeAnimatedLuaSprite('gf-amogus', 'backgrounds/gf-amogus', 700, 350);
+    addAnimationByPrefix('gf-amogus', 'gf-amogus', 'amongus-gf', 24, true);  
+    objectPlayAnimation('gf-amogus', 'gf-amogus', true)
+    scaleObject('gf-amogus', 1.1, 1.1);
+    addLuaSprite('gf-amogus', false);
+    
+    makeLuaText('watermark', "OPT y RT Don gato | Mod Box Funkin", 0, 850, 20);
+    setTextSize('watermark',18);
+    addLuaText('watermark');
+    setProperty('watermark.alpha',0.35);
 end
-
-local Cam1 = 0.9
-local Cam2 = 0.7
-
-function onMoveCamera(focus)
-if focus == 'boyfriend' then
-setProperty('defaultCamZoom', Cam1) 
-elseif focus == 'dad' then
-setProperty('defaultCamZoom', Cam2) 
+function onUpdate()
+    if followchars == true then
+        if mustHitSection == false then
+            setProperty('defaultCamZoom',0.8)
+            if getProperty('dad.animation.curAnim.name') == 'singLEFT' then
+                triggerEvent('Camera Follow Pos',xx-ofs,yy)
+            end
+            if getProperty('dad.animation.curAnim.name') == 'singRIGHT' then
+                triggerEvent('Camera Follow Pos',xx+ofs,yy)
+            end
+            if getProperty('dad.animation.curAnim.name') == 'singUP' then
+                triggerEvent('Camera Follow Pos',xx,yy-ofs)
+            end
+            if getProperty('dad.animation.curAnim.name') == 'singDOWN' then
+                triggerEvent('Camera Follow Pos',xx,yy+ofs)
+            end
+            if getProperty('dad.animation.curAnim.name') == 'singLEFT-alt' then
+                triggerEvent('Camera Follow Pos',xx-ofs,yy)
+            end
+            if getProperty('dad.animation.curAnim.name') == 'singRIGHT-alt' then
+                triggerEvent('Camera Follow Pos',xx+ofs,yy)
+            end
+            if getProperty('dad.animation.curAnim.name') == 'singUP-alt' then
+                triggerEvent('Camera Follow Pos',xx,yy-ofs)
+            end
+            if getProperty('dad.animation.curAnim.name') == 'singDOWN-alt' then
+                triggerEvent('Camera Follow Pos',xx,yy+ofs)
+            end
+            if getProperty('dad.animation.curAnim.name') == 'idle-alt' then
+                triggerEvent('Camera Follow Pos',xx,yy)
+            end
+            if getProperty('dad.animation.curAnim.name') == 'idle' then
+                triggerEvent('Camera Follow Pos',xx,yy)
+            end
+        else
+            setProperty('defaultCamZoom',1.0)
+            if getProperty('boyfriend.animation.curAnim.name') == 'singLEFT' then
+                triggerEvent('Camera Follow Pos',xx2-ofs,yy2)
+            end
+            if getProperty('boyfriend.animation.curAnim.name') == 'singRIGHT' then
+                triggerEvent('Camera Follow Pos',xx2+ofs,yy2)
+            end
+            if getProperty('boyfriend.animation.curAnim.name') == 'singUP' then
+                triggerEvent('Camera Follow Pos',xx2,yy2-ofs)
+            end
+            if getProperty('boyfriend.animation.curAnim.name') == 'singDOWN' then
+                triggerEvent('Camera Follow Pos',xx2,yy2+ofs)
+            end
+            if getProperty('boyfriend.animation.curAnim.name') == 'idle-alt' then
+                triggerEvent('Camera Follow Pos',xx2,yy2)
+            end
+            if getProperty('boyfriend.animation.curAnim.name') == 'idle' then
+                triggerEvent('Camera Follow Pos',xx2,yy2)
+            end
+        end
+    else
+        triggerEvent('Camera Follow Pos','','')
+    end
 end
-end
-
-function onEvent(name,value1,value2)
-if name == 'BlackLight' then
-cameraFlash('other', '000000', '2')
-end
-end
-
-function onBeatHit()
-local Prob = math.random(1, 20)  
-if curBeat % 20 == 0 and Prob <= 10 then
-objectPlayAnimation('flacu-nuggy', 'flacu-nuggy', true)
-elseif curBeat % 20 == 0 and Prob >= 10 then
-objectPlayAnimation('leansito', 'leansito', true)
-end
-end 
