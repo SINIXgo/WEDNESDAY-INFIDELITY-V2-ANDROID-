@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="TOO SLOW COVER.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="MAD MIKI DOWN instancia 10000" x="0" y="0" width="385" height="361" frameX="0" frameY="-3" frameWidth="386" frameHeight="364"/>
+	<SubTexture name="MAD MIKI DOWN instancia 10001" x="0" y="0" width="385" height="361" frameX="0" frameY="-3" frameWidth="386" frameHeight="364"/>
+	<SubTexture name="MAD MIKI DOWN instancia 10002" x="385" y="0" width="385" height="363" frameX="-1" frameY="-1" frameWidth="386" frameHeight="364"/>
+	<SubTexture name="MAD MIKI DOWN instancia 10003" x="385" y="0" width="385" height="363" frameX="-1" frameY="-1" frameWidth="386" frameHeight="364"/>
+	<SubTexture name="MAD MIKI DOWN instancia 10004" x="770" y="0" width="385" height="364" frameX="-1" frameY="0" frameWidth="386" frameHeight="364"/>
+	<SubTexture name="MAD MIKI DOWN instancia 10005" x="770" y="0" width="385" height="364" frameX="-1" frameY="0" frameWidth="386" frameHeight="364"/>
+	<SubTexture name="MAD MIKI DOWN instancia 10006" x="770" y="0" width="385" height="364" frameX="-1" frameY="0" frameWidth="386" frameHeight="364"/>
+	<SubTexture name="MAD MIKI DOWN instancia 10007" x="770" y="0" width="385" height="364" frameX="-1" frameY="0" frameWidth="386" frameHeight="364"/>
+	<SubTexture name="MAD MIKI DOWN instancia 10008" x="770" y="0" width="385" height="364" frameX="-1" frameY="0" frameWidth="386" frameHeight="364"/>
+	<SubTexture name="MAD MIKI DOWN instancia 10009" x="770" y="0" width="385" height="364" frameX="-1" frameY="0" frameWidth="386" frameHeight="364"/>
+	<SubTexture name="MAD MIKI DOWN instancia 10010" x="770" y="0" width="385" height="364" frameX="-1" frameY="0" frameWidth="386" frameHeight="364"/>
+	<SubTexture name="MAD MIKI DOWN instancia 10011" x="770" y="0" width="385" height="364" frameX="-1" frameY="0" frameWidth="386" frameHeight="364"/>
+	<SubTexture name="MAD MIKI DOWN instancia 10012" x="770" y="0" width="385" height="364" frameX="-1" frameY="0" frameWidth="386" frameHeight="364"/>
+	<SubTexture name="MAD MIKI DOWN instancia 10013" x="770" y="0" width="385" height="364" frameX="-1" frameY="0" frameWidth="386" frameHeight="364"/>
+	<SubTexture name="MAD MIKI IDLE instancia 10000" x="1155" y="0" width="367" height="388" frameX="0" frameY="-15" frameWidth="397" frameHeight="403"/>
+	<SubTexture name="MAD MIKI IDLE instancia 10001" x="1522" y="0" width="360" height="386" frameX="-4" frameY="-17" frameWidth="397" frameHeight="403"/>
+	<SubTexture name="MAD MIKI IDLE instancia 10002" x="0" y="388" width="375" height="383" frameX="-5" frameY="-20" frameWidth="397" frameHeight="403"/>
+	<SubTexture name="MAD MIKI IDLE instancia 10003" x="375" y="388" width="374" height="386" frameX="-3" frameY="-17" frameWidth="397" frameHeight="403"/>
+	<SubTexture name="MAD MIKI IDLE instancia 10004" x="749" y="388" width="384" height="392" frameX="-8" frameY="-11" frameWidth="397" frameHeight="403"/>
+	<SubTexture name="MAD MIKI IDLE instancia 10005" x="1133" y="388" width="384" height="388" frameX="-10" frameY="-15" frameWidth="397" frameHeight="403"/>
+	<SubTexture name="MAD MIKI IDLE instancia 10006" x="1517" y="388" width="387" height="400" frameX="-10" frameY="-3" frameWidth="397" frameHeight="403"/>
+	<SubTexture name="MAD MIKI IDLE instancia 10007" x="1517" y="388" width="387" height="400" frameX="-10" frameY="-3" frameWidth="397" frameHeight="403"/>
+	<SubTexture name="MAD MIKI IDLE instancia 10008" x="0" y="788" width="385" height="402" frameX="-11" frameY="-1" frameWidth="397" frameHeight="403"/>
+	<SubTexture name="MAD MIKI IDLE instancia 10009" x="0" y="788" width="385" height="402" frameX="-11" frameY="-1" frameWidth="397" frameHeight="403"/>
+	<SubTexture name="MAD MIKI IDLE instancia 10010" x="385" y="788" width="382" height="403" frameX="-11" frameY="0" frameWidth="397" frameHeight="403"/>
+	<SubTexture name="MAD MIKI IDLE instancia 10011" x="385" y="788" width="382" height="403" frameX="-11" frameY="0" frameWidth="397" frameHeight="403"/>
+	<SubTexture name="MAD MIKI IDLE instancia 10012" x="767" y="788" width="381" height="403" frameX="-11" frameY="0" frameWidth="397" frameHeight="403"/>
+	<SubTexture name="MAD MIKI IDLE instancia 10013" x="767" y="788" width="381" height="403" frameX="-11" frameY="0" frameWidth="397" frameHeight="403"/>
+	<SubTexture name="MAD MIKI IDLE instancia 10014" x="767" y="788" width="381" height="403" frameX="-11" frameY="0" frameWidth="397" frameHeight="403"/>
+	<SubTexture name="MAD MIKI IDLE instancia 10015" x="767" y="788" width="381" height="403" frameX="-11" frameY="0" frameWidth="397" frameHeight="403"/>
+	<SubTexture name="MAD MIKI LEFT instancia 10000" x="1148" y="788" width="404" height="455" frameX="0" frameY="0" frameWidth="412" frameHeight="456"/>
+	<SubTexture name="MAD MIKI LEFT instancia 10001" x="1148" y="788" width="404" height="455" frameX="0" frameY="0" frameWidth="412" frameHeight="456"/>
+	<SubTexture name="MAD MIKI LEFT instancia 10002" x="1552" y="788" width="403" height="449" frameX="-7" frameY="-7" frameWidth="412" frameHeight="456"/>
+	<SubTexture name="MAD MIKI LEFT instancia 10003" x="1552" y="788" width="403" height="449" frameX="-7" frameY="-7" frameWidth="412" frameHeight="456"/>
+	<SubTexture name="MAD MIKI LEFT instancia 10004" x="0" y="1243" width="403" height="448" frameX="-9" frameY="-8" frameWidth="412" frameHeight="456"/>
+	<SubTexture name="MAD MIKI LEFT instancia 10005" x="0" y="1243" width="403" height="448" frameX="-9" frameY="-8" frameWidth="412" frameHeight="456"/>
+	<SubTexture name="MAD MIKI LEFT instancia 10006" x="0" y="1243" width="403" height="448" frameX="-9" frameY="-8" frameWidth="412" frameHeight="456"/>
+	<SubTexture name="MAD MIKI LEFT instancia 10007" x="0" y="1243" width="403" height="448" frameX="-9" frameY="-8" frameWidth="412" frameHeight="456"/>
+	<SubTexture name="MAD MIKI LEFT instancia 10008" x="0" y="1243" width="403" height="448" frameX="-9" frameY="-8" frameWidth="412" frameHeight="456"/>
+	<SubTexture name="MAD MIKI LEFT instancia 10009" x="0" y="1243" width="403" height="448" frameX="-9" frameY="-8" frameWidth="412" frameHeight="456"/>
+	<SubTexture name="MAD MIKI LEFT instancia 10010" x="0" y="1243" width="403" height="448" frameX="-9" frameY="-8" frameWidth="412" frameHeight="456"/>
+	<SubTexture name="MAD MIKI LEFT instancia 10011" x="0" y="1243" width="403" height="448" frameX="-9" frameY="-8" frameWidth="412" frameHeight="456"/>
+	<SubTexture name="MAD MIKI LEFT instancia 10012" x="0" y="1243" width="403" height="448" frameX="-9" frameY="-8" frameWidth="412" frameHeight="456"/>
+	<SubTexture name="MAD MIKI LEFT instancia 10013" x="0" y="1243" width="403" height="448" frameX="-9" frameY="-8" frameWidth="412" frameHeight="456"/>
+	<SubTexture name="MAD MIKI RIGHT instancia 10000" x="403" y="1243" width="383" height="413" frameX="-3" frameY="0" frameWidth="386" frameHeight="413"/>
+	<SubTexture name="MAD MIKI RIGHT instancia 10001" x="403" y="1243" width="383" height="413" frameX="-3" frameY="0" frameWidth="386" frameHeight="413"/>
+	<SubTexture name="MAD MIKI RIGHT instancia 10002" x="786" y="1243" width="378" height="409" frameX="0" frameY="-4" frameWidth="386" frameHeight="413"/>
+	<SubTexture name="MAD MIKI RIGHT instancia 10003" x="786" y="1243" width="378" height="409" frameX="0" frameY="-4" frameWidth="386" frameHeight="413"/>
+	<SubTexture name="MAD MIKI RIGHT instancia 10004" x="1164" y="1243" width="377" height="409" frameX="0" frameY="-4" frameWidth="386" frameHeight="413"/>
+	<SubTexture name="MAD MIKI RIGHT instancia 10005" x="1164" y="1243" width="377" height="409" frameX="0" frameY="-4" frameWidth="386" frameHeight="413"/>
+	<SubTexture name="MAD MIKI RIGHT instancia 10006" x="1164" y="1243" width="377" height="409" frameX="0" frameY="-4" frameWidth="386" frameHeight="413"/>
+	<SubTexture name="MAD MIKI RIGHT instancia 10007" x="1164" y="1243" width="377" height="409" frameX="0" frameY="-4" frameWidth="386" frameHeight="413"/>
+	<SubTexture name="MAD MIKI RIGHT instancia 10008" x="1164" y="1243" width="377" height="409" frameX="0" frameY="-4" frameWidth="386" frameHeight="413"/>
+	<SubTexture name="MAD MIKI RIGHT instancia 10009" x="1164" y="1243" width="377" height="409" frameX="0" frameY="-4" frameWidth="386" frameHeight="413"/>
+	<SubTexture name="MAD MIKI RIGHT instancia 10010" x="1164" y="1243" width="377" height="409" frameX="0" frameY="-4" frameWidth="386" frameHeight="413"/>
+	<SubTexture name="MAD MIKI RIGHT instancia 10011" x="1164" y="1243" width="377" height="409" frameX="0" frameY="-4" frameWidth="386" frameHeight="413"/>
+	<SubTexture name="MAD MIKI RIGHT instancia 10012" x="1164" y="1243" width="377" height="409" frameX="0" frameY="-4" frameWidth="386" frameHeight="413"/>
+	<SubTexture name="MAD MIKI RIGHT instancia 10013" x="1164" y="1243" width="377" height="409" frameX="0" frameY="-4" frameWidth="386" frameHeight="413"/>
+	<SubTexture name="MAD MIKI UP instancia 10000" x="1541" y="1243" width="334" height="437"/>
+	<SubTexture name="MAD MIKI UP instancia 10001" x="1541" y="1243" width="334" height="437"/>
+	<SubTexture name="MAD MIKI UP instancia 10002" x="0" y="1691" width="331" height="435" frameX="-2" frameY="-2" frameWidth="334" frameHeight="437"/>
+	<SubTexture name="MAD MIKI UP instancia 10003" x="0" y="1691" width="331" height="435" frameX="-2" frameY="-2" frameWidth="334" frameHeight="437"/>
+	<SubTexture name="MAD MIKI UP instancia 10004" x="331" y="1691" width="331" height="433" frameX="-2" frameY="-4" frameWidth="334" frameHeight="437"/>
+	<SubTexture name="MAD MIKI UP instancia 10005" x="331" y="1691" width="331" height="433" frameX="-2" frameY="-4" frameWidth="334" frameHeight="437"/>
+	<SubTexture name="MAD MIKI UP instancia 10006" x="331" y="1691" width="331" height="433" frameX="-2" frameY="-4" frameWidth="334" frameHeight="437"/>
+	<SubTexture name="MAD MIKI UP instancia 10007" x="331" y="1691" width="331" height="433" frameX="-2" frameY="-4" frameWidth="334" frameHeight="437"/>
+	<SubTexture name="MAD MIKI UP instancia 10008" x="331" y="1691" width="331" height="433" frameX="-2" frameY="-4" frameWidth="334" frameHeight="437"/>
+	<SubTexture name="MAD MIKI UP instancia 10009" x="331" y="1691" width="331" height="433" frameX="-2" frameY="-4" frameWidth="334" frameHeight="437"/>
+	<SubTexture name="MAD MIKI UP instancia 10010" x="331" y="1691" width="331" height="433" frameX="-2" frameY="-4" frameWidth="334" frameHeight="437"/>
+	<SubTexture name="MAD MIKI UP instancia 10011" x="331" y="1691" width="331" height="433" frameX="-2" frameY="-4" frameWidth="334" frameHeight="437"/>
+	<SubTexture name="MAD MIKI UP instancia 10012" x="331" y="1691" width="331" height="433" frameX="-2" frameY="-4" frameWidth="334" frameHeight="437"/>
+	<SubTexture name="MAD MIKI UP instancia 10013" x="331" y="1691" width="331" height="433" frameX="-2" frameY="-4" frameWidth="334" frameHeight="437"/>
+</TextureAtlas>
