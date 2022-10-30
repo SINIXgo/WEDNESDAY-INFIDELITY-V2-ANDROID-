@@ -3,7 +3,7 @@
 		{
 			"offsets": [
 				0,
-				-2
+				0
 			],
 			"loop": false,
 			"fps": 24,
@@ -14,7 +14,7 @@
 		{
 			"offsets": [
 				130,
-				91
+				82
 			],
 			"loop": false,
 			"fps": 24,
@@ -25,7 +25,7 @@
 		{
 			"offsets": [
 				-6,
-				48
+				40
 			],
 			"loop": false,
 			"fps": 24,
@@ -36,7 +36,7 @@
 		{
 			"offsets": [
 				-141,
-				210
+				169
 			],
 			"loop": false,
 			"fps": 24,
@@ -46,8 +46,8 @@
 		},
 		{
 			"offsets": [
-				-35,
-				-57
+				-37,
+				-50
 			],
 			"loop": false,
 			"fps": 24,
@@ -58,8 +58,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				15,
-				36
+				18,
+				28
 			],
 			"anim": "scream",
 			"fps": 24,
@@ -67,11 +67,12 @@
 			"indices": []
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
-	"image": "characters/D-Side/OSWALD_SUICIDE",
+	"image": "characters/OSWALD_SUICIDE",
 	"position": [
 		-150,
-		305
+		195
 	],
 	"healthicon": "oswald-suicide",
 	"flip_x": false,
@@ -81,9 +82,9 @@
 		73
 	],
 	"camera_position": [
-		-360,
-		-210
+		0,
+		0
 	],
 	"sing_duration": 4.5,
-	"scale": 2.4
+	"scale": 1.2
 }

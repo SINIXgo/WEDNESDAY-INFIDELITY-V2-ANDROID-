@@ -5,59 +5,60 @@
 				0,
 				0
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "idle",
-			"indices": [],
+			"loop": false,
 			"name": "MAD MIKI IDLE"
 		},
 		{
 			"offsets": [
-				4,
-				15
+				3,
+				11
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
+			"loop": false,
 			"name": "MAD MIKI LEFT"
 		},
 		{
 			"offsets": [
-				8,
-				-30
+				6,
+				-26
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
+			"loop": false,
 			"name": "MAD MIKI DOWN"
 		},
 		{
 			"offsets": [
-				-45,
-				53
+				-37,
+				41
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
+			"loop": false,
 			"name": "MAD MIKI UP"
 		},
 		{
 			"offsets": [
-				-34,
-				45
+				-29,
+				35
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
+			"loop": false,
 			"name": "MAD MIKI RIGHT"
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
-	"image": "characters/Iratus/Prisoner_Mickey2",
+	"image": "characters/Prisoner_Mickey",
 	"position": [
 		80,
 		370
@@ -70,8 +71,8 @@
 		126
 	],
 	"camera_position": [
-		175,
-		-50
+		0,
+		0
 	],
 	"sing_duration": 3.90000000000001,
 	"scale": 1.2

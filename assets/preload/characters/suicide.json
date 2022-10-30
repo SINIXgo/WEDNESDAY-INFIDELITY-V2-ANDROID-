@@ -1,6 +1,17 @@
 {
 	"animations": [
 		{
+			"loop": false,
+			"offsets": [
+				80,
+				28
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Suicide Down",
+			"indices": []
+		},
+		{
 			"loop": true,
 			"offsets": [
 				0,
@@ -8,59 +19,60 @@
 			],
 			"anim": "idle",
 			"fps": 24,
-			"name": "smiler mouse idle",
+			"name": "Suicide Idle",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				60,
-				38
-			],
-			"anim": "singDOWN",
-			"fps": 24,
-			"name": "smiler mouse down",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				144,
-				268
+				147,
+				149
 			],
 			"anim": "singLEFT",
 			"fps": 24,
-			"name": "smiler mouse left",
+			"name": "Suicide Left",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				60,
-				164
+				1,
+				143
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "smiler mouse rigth",
+			"name": "Suicide Rigth",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				109,
-				239
+				-20,
+				162
 			],
 			"anim": "singUP",
 			"fps": 24,
-			"name": "smiler mouse up",
+			"name": "Suicide Up",
 			"indices": []
+		},
+		{
+			"offsets": [
+				40,
+				110
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "dodge",
+			"indices": [],
+			"name": "Hit Mouse"
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
-	"image": "characters/WeekSuicide/elrisas",
+	"image": "characters/Suicide",
 	"position": [
-		-55,
-		145
+		-105,
+		185
 	],
 	"healthicon": "mouse",
 	"flip_x": false,
@@ -70,8 +82,8 @@
 		69
 	],
 	"camera_position": [
-		-210,
-		-120
+		-120,
+		30
 	],
 	"sing_duration": 4,
 	"scale": 1.2

@@ -1,66 +1,67 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-40,
-				-6
+				-5
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "MAD MIKI IDLE",
-			"indices": []
+			"indices": [],
+			"name": "MAD MIKI IDLE"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				83,
-				58
+				55,
+				41
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "MAD MIKI LEFT",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "MAD MIKI LEFT"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-34,
-				-58
+				-43
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "MAD MIKI DOWN",
-			"indices": []
+			"indices": [],
+			"name": "MAD MIKI DOWN"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-43,
-				35
+				-41,
+				22
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "MAD MIKI UP",
-			"indices": []
+			"indices": [],
+			"name": "MAD MIKI UP"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-49,
-				6
+				-48,
+				3
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "MAD MIKI RIGHT",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "MAD MIKI RIGHT"
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
 	"image": "characters/too-slow/tiny mouse mad",
 	"position": [
-		20,
-		450
+		0,
+		460
 	],
 	"healthicon": "miki2",
 	"flip_x": false,

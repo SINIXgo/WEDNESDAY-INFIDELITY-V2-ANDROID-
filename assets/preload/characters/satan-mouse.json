@@ -2,8 +2,8 @@
 	"animations": [
 		{
 			"offsets": [
-				-9,
-				253
+				31,
+				262
 			],
 			"loop": true,
 			"fps": 24,
@@ -13,8 +13,8 @@
 		},
 		{
 			"offsets": [
-				30,
-				327
+				115,
+				321
 			],
 			"loop": false,
 			"fps": 24,
@@ -24,8 +24,8 @@
 		},
 		{
 			"offsets": [
-				-64,
-				375
+				16,
+				345
 			],
 			"loop": false,
 			"fps": 24,
@@ -35,7 +35,7 @@
 		},
 		{
 			"offsets": [
-				49,
+				79,
 				212
 			],
 			"loop": false,
@@ -46,8 +46,8 @@
 		},
 		{
 			"offsets": [
-				156,
-				373
+				72,
+				343
 			],
 			"loop": false,
 			"fps": 24,
@@ -57,8 +57,8 @@
 		},
 		{
 			"offsets": [
-				-19,
-				282
+				20,
+				286
 			],
 			"loop": false,
 			"fps": 24,
@@ -69,8 +69,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				73,
-				252
+				101,
+				261
 			],
 			"anim": "transform",
 			"fps": 24,
@@ -78,10 +78,11 @@
 			"indices": []
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
 	"image": "characters/too-slow/tiny mouse satan",
 	"position": [
-		-15,
+		55,
 		475
 	],
 	"healthicon": "evilmiki",
@@ -92,9 +93,9 @@
 		41
 	],
 	"camera_position": [
-		-150,
-		-400
+		-110,
+		-90
 	],
 	"sing_duration": 4.00000000000001,
-	"scale": 1.5
+	"scale": 1.2
 }

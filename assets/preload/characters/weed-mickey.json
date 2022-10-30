@@ -4,7 +4,7 @@
 			"loop": false,
 			"offsets": [
 				0,
-				-1
+				0
 			],
 			"fps": 18,
 			"anim": "idle",
@@ -35,8 +35,8 @@
 		},
 		{
 			"offsets": [
-				69,
-				4
+				71,
+				5
 			],
 			"loop": false,
 			"fps": 18,
@@ -46,8 +46,8 @@
 		},
 		{
 			"offsets": [
-				128,
-				-46
+				84,
+				-43
 			],
 			"loop": false,
 			"fps": 18,
@@ -60,7 +60,7 @@
 	"image": "characters/Weed-Mickey",
 	"position": [
 		0,
-		150
+		0
 	],
 	"healthicon": "munchies",
 	"flip_x": false,
@@ -73,6 +73,6 @@
 		0,
 		0
 	],
-	"sing_duration": 6.3,
-	"scale": 2.4
+	"sing_duration": 6.1,
+	"scale": 1
 }

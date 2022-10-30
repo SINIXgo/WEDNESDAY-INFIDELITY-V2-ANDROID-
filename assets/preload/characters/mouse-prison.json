@@ -1,63 +1,64 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
-				-2,
+				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "MIKI SAD IDLE"
+			"fps": 24,
+			"name": "MIKI SAD IDLE",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-24,
-				46
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				-17,
+				36
+			],
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "MIKI SAD LEFT"
+			"fps": 24,
+			"name": "MIKI SAD LEFT",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-1,
-				-21
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				1,
+				-17
+			],
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "MIKI SAD DOWN"
+			"fps": 24,
+			"name": "MIKI SAD DOWN",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-38,
-				45
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				-29,
+				37
+			],
 			"anim": "singUP",
-			"indices": [],
-			"name": "MIKI SAD UP"
+			"fps": 24,
+			"name": "MIKI SAD UP",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-42,
-				23
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				-33,
+				19
+			],
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "MIKI SAD RIGHT"
+			"fps": 24,
+			"name": "MIKI SAD RIGHT",
+			"indices": []
 		}
 	],
+	"dataType": "JSON",
 	"no_antialiasing": false,
-	"image": "characters/Iratus/Prisoner_Mickey",
+	"image": "characters/Prisoner_Mickey",
 	"position": [
 		80,
 		370
